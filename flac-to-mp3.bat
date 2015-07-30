@@ -114,14 +114,14 @@ for /f "tokens=1-2 delims==" %%a in ('set root') do (
 			REM if defined %%~ab <and> if %%~ab neq d--------
 	
 	
-	REM If the path is not to a file with extension ...
+	REM If the path is not to a file with extension...
 	if "%%~xb" equ "" (
-		REM ... it has attributes ...
+		REM ...it has attributes...
 		REM (Can only be if it has attributes, but are not of those which are to a directory ["d--------"].)
 		if "%%~ab" neq "" (
-			REM ... and it is to a file without extension ...
+			REM ...and it is to a file without extension...
 			if %%~ab neq d-------- (
-				REM ... it is to a pre-existent file.
+				REM ...it is to a pre-existent file.
 				REM Check if it exists.
 				if not exist %%b (
 					REM The file does not exist.
@@ -135,15 +135,15 @@ for /f "tokens=1-2 delims==" %%a in ('set root') do (
 					set %%a=
 				)
 			) else (
-				REM ... and it is not to a file without extension ...
-				REM ... it is to a pre-existent directory.
+				REM ...and it is not to a file without extension...
+				REM ...it is to a pre-existent directory.
 				REM Assure a trailing backslash.
 				REM This is done in a subroutine, to circumvent the need of delayed environment variable expansion.
 				call :assurebackslash %%a %%b
 			)
 		) else (
 			REM (If it is not to a pre-existent directory or file without extension.)
-			REM ... it is assumed to be to a directory.
+			REM ...it is assumed to be to a directory.
 			REM Assure a trailing backslash.
 			REM This is done in a subroutine, to circumvent the need of delayed environment variable expansion.
 			call :assurebackslash %%a %%b
@@ -266,7 +266,7 @@ for /f "tokens=1-2 delims==" %%a in ('set root') do (
 call :echoheadline Encode
 
 REM Open the directory after encoding to it.
-echo Opening relative output directory ^(%relativeoutputdirectory%^) ...
+echo Opening relative output directory ^(%relativeoutputdirectory%^)...
 explorer %relativeoutputdirectory%
 
 REM Clean up.
