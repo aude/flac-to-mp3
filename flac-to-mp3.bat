@@ -1,6 +1,6 @@
 @echo off
 
-title FLAC to MP3
+title flac-to-mp3.bat
 
 REM ------ Userdefined variables ------
 REM -----------------------------------
