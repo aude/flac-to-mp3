@@ -405,7 +405,7 @@ if "%tmplowerdirectory%" equ "" (
 	echo %1 is empty.
 	echo Thus, no files are to be encoded, and the path will be skipped.
 	echo.
-	
+
 	goto :eof
 )
 
